@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZKJKC_LIB_BOOK_TAB_1656'
+@MappingRole: true
+define role ZKJKC_LIB_BOOK_TAB_1656 {
+  grant select on ZKJKC_LIB_BOOK_TAB_1656
+  where INHERITING CONDITIONS FROM ENTITY ZKJKR_LIB_BOOK_TAB_1656 REPLACING { ROOT WITH _BaseEntity };
+}

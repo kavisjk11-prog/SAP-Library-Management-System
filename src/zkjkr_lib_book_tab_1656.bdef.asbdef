@@ -1,0 +1,52 @@
+managed implementation in class ZKJKBP_R_LIB_BOOK_TAB_1656 unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZKJKR_LIB_BOOK_TAB_1656 alias ZkjkrLibBookTab1656
+persistent table ZLIB_BOOK_TAB_1
+extensible
+draft table ZKJKLB_BK_T_D656
+etag master LocalLastChanged
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( readonly )
+   BookUUID,
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt,
+   LocalLastChanged;
+
+  field ( numbering : managed )
+   BookUUID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZLIB_BOOK_TAB_1 corresponding extensible
+  {
+    BookUUID = BOOK_UUID;
+    BookID = BOOK_ID;
+    Title = TITLE;
+    Author = AUTHOR;
+    PublishYear = PUBLISH_YEAR;
+    Isbn = ISBN;
+    Genre = GENRE;
+    Status = STATUS;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChanged = LOCAL_LAST_CHANGED;
+  }
+
+}

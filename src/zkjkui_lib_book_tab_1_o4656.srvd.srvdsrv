@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZKJKC_LIB_BOOK_TAB_1656'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZKJKC_LIB_BOOK_TAB_1656'
+  }
+}
+define service ZKJKUI_LIB_BOOK_TAB_1_O4656 provider contracts odata_v4_ui {
+  expose ZKJKC_LIB_BOOK_TAB_1656;
+}
